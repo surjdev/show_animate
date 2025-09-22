@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://ddup5xevmdpa2"]
+
+[ext_resource type="Script" uid="uid://bqm0y3r41r3xo" path="res://scene.gd" id="1_nxogm"]
+[ext_resource type="PackedScene" uid="uid://bq1dcsagq0iuc" path="res://assets/player_catwalk.fbx" id="1_ulcgi"]
+[ext_resource type="PackedScene" uid="uid://b2jc23o4r1lf" path="res://assets/player_catwalk.tscn" id="3_3253y"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nxogm"]
+albedo_color = Color(0.602509, 1, 0.486285, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_3253y"]
+top_radius = 46.045
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_nxogm")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.822611, 0.568605, 0, -0.568605, 0.822611, 0.0615656, 9.26179, 26.0419)
+
+[node name="player_catwalk" parent="." instance=ExtResource("1_ulcgi")]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.554611, 0)
+material_override = SubResource("StandardMaterial3D_nxogm")
+mesh = SubResource("CylinderMesh_3253y")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11.7604, -13.9981)
+
+[node name="player_catwalk2" parent="." instance=ExtResource("3_3253y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.70307, 0, 0)
+
+[node name="player_catwalk3" parent="." instance=ExtResource("3_3253y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.7524, 0, 0)
