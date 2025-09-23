@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bq1dcsagq0iuc"
-path="res://.godot/imported/player_catwalk.fbx-4483f2aa74260a1f2ded761d24520be6.scn"
+valid=false
 
 [deps]
 
 source_file="res://assets/player_catwalk.fbx"
-dest_files=["res://.godot/imported/player_catwalk.fbx-4483f2aa74260a1f2ded761d24520be6.scn"]
 
 [params]
 
